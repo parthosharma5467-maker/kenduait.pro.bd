@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KENDUA CYBER SECURITY IT AI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,"Noto Sans Bengali",sans-serif;
+    background:#050505;
+    color:white;
+    line-height:1.6;
+}
+
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* Header */
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#000;
+    border-bottom:1px solid #292929;
+}
+
+nav{
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo-text{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo-text span{
+    color:#777;
+}
+
+.nav-buttons{
+    display:flex;
+    gap:8px;
+}
+
+.btn{
+    border:1px solid #444;
+    background:#111;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.btn:hover{
+    background:#222;
+}
+
+/* Hero */
+.hero{
+    text-align:center;
+    padding:60px 0 40px;
+}
+
+.main-logo{
+    width:170px;
+    height:170px;
+    object-fit:contain;
+    background:white;
+    border-radius:20px;
+    padding:10px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(30px,6vw,55px);
+    line-height:1.1;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#bbb;
+    font-size:18px;
+}
+
+.badge{
+    display:inline-block;
+    margin:15px 0;
+    padding:7px 15px;
+    border:1px solid #444;
+    border-radius:30px;
+}
+
+/* Promo */
+.promo{
+    max-width:800px;
+    margin:30px auto;
+    padding:28px;
+    border:1px solid #444;
+    border-radius:18px;
+    background:#101010;
+}
+
+.promo-code{
+    display:inline-block;
+    background:white;
+    color:black;
+    padding:10px 15px;
+    border-radius:8px;
+    font-weight:bold;
+    margin:12px 0;
+}
+
+.discount{
+    font-size:25px;
+    font-weight:bold;
+}
+
+/* Section */
+section{
+    padding:45px 0;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+/* Services */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.card{
+    background:#0d0d0d;
+    border:1px solid #282828;
+    border-radius:15px;
+    padding:22px;
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+.card li{
+    list-style:none;
+    color:#ddd;
+    margin:7px 0;
+}
+
+.card li::before{
+    content:"✓ ";
+    font-weight:bold;
+}
+
+/* CTA */
+.cta{
+    text-align:center;
+    background:#101010;
+    border:1px solid #292929;
+    border-radius:18px;
+    padding:35px;
+}
+
+.contact{
+    font-size:19px;
+    margin:8px 0;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    color:#888;
+    padding:30px;
+    border-top:1px solid #222;
+}
+
+/* Modal */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:999;
+    background:rgba(0,0,0,.85);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal-box{
+    width:min(420px,100%);
+    background:#111;
+    border:1px solid #444;
+    border-radius:15px;
+    padding:25px;
+}
+
+.close{
+    float:right;
+    font-size:25px;
+    cursor:pointer;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:7px 0;
+    background:#050505;
+    color:white;
+    border:1px solid #444;
+    border-radius:8px;
+}
+
+.message{
+    margin-top:12px;
+    color:#ccc;
+}
+
+/* Mobile */
+@media(max-width:650px){
+    .nav-buttons{
+        display:none;
+    }
+
+    .main-logo{
+        width:140px;
+        height:140px;
+    }
+
+    .hero{
+        padding-top:40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="container">
+
+<nav>
+
+<div class="logo-text">
+KENDUA <span>IT.PRO.BD</span>
+</div>
+
+<div class="nav-buttons">
+<a href="#services" class="btn">Services</a>
+<a href="#course" class="btn">Course</a>
+
+<button class="btn" onclick="openLogin()">
+Login
+</button>
+
+<button class="btn" onclick="openRegister()">
+Create Account
+</button>
+
+</div>
+
+</nav>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+<main>
+
+<section class="hero container">
+
+<img src="logo.jpg"
+     class="main-logo"
+     alt="Kendua Skill Logo">
+
+<div class="badge">
+🛡️ Safe Today • Secure Tomorrow
+</div>
+
+<h1>
+KENDUA CYBER SECURITY IT AI
+</h1>
+
+<p class="subtitle">
+💻 Digital & Social Media Services
+</p>
+
+
+<!-- COURSE PROMO -->
+<div class="promo" id="course">
+
+<h2>🎓 COURSE PROMO</h2>
+
+<p>
+Promo Code
+</p>
+
+<div class="promo-code">
+SHARMAFREE12%
+</div>
+
+<p>
+১৬৯৯ টাকার কোর্সে এই প্রোমো কোড ব্যবহার করলেই
+</p>
+
+<p class="discount">
+২০০ টাকা ছাড়
+</p>
+
+<br>
+
+<p>
+কি কি শিখবেন, কিভাবে ক্লাস করবেন—
+সব কিছু এই ওয়েবপেজে দেওয়া আছে।
+</p>
+
+<br>
+
+<a
+href="https://wa.me/8801607341845"
+target="_blank"
+class="btn">
+
+WhatsApp এ Join করুন
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services" class="container">
+
+<h2>
+আমাদের সেবাসমূহ
+</h2>
+
+<div class="grid">
+
+
+<!-- Facebook -->
+<div class="card">
+
+<h3>
+📘 Facebook Services
+</h3>
+
+<ul>
+
+<li>Facebook Suspended Account Recovery Support</li>
+
+<li>Facebook Disabled Account Recovery Support</li>
+
+<li>Facebook Copyright Issue Support</li>
+
+<li>Facebook Harassment Account Report Support</li>
+
+<li>Facebook Page Setup & Management</li>
+
+<li>Facebook Monetization Support</li>
+
+<li>Facebook Followers Service</li>
+
+<li>Facebook Organic Views & Growth</li>
+
+<li>Facebook Recommendation Issue Support</li>
+
+<li>Facebook Stars Service</li>
+
+<li>Harassment Photo/Content Removal Support</li>
+
+</ul>
+
+</div>
+
+
+<!-- Instagram -->
+<div class="card">
+
+<h3>
+📱 Instagram Services
+</h3>
+
+<ul>
+
+<li>Instagram Suspended Account Recovery Support</li>
+
+<li>Instagram Copyright Issue Support</li>
+
+<li>Instagram Followers Service</li>
+
+<li>Instagram Organic Views & Growth</li>
+
+<li>Instagram Account Support</li>
+
+</ul>
+
+</div>
+
+
+<!-- Digital -->
+<div class="card">
+
+<h3>
+💳 Digital Services
+</h3>
+
+<ul>
+
+<li>bKash / Nagad Registration Assistance</li>
+
+<li>Other Online & Digital Services</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="container">
+
+<div class="cta">
+
+<h2>
+Course Open চলছে 🚀
+</h2>
+
+<p class="contact">
+Join করতে Inbox অথবা WhatsApp করুন
+</p>
+
+<p>
+📞 Contact:
+<strong>01718112323</strong>
+</p>
+
+<p>
+📱 Course WhatsApp:
+<strong>01607341845</strong>
+</p>
+
+<p>
+🌐 Website:
+<strong>kenduait.pro.bd</strong>
+</p>
+
+<br>
+
+<a
+href="https://wa.me/8801607341845"
+target="_blank"
+class="btn">
+
+Chat on WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 KENDUA CYBER SECURITY IT AI
+</p>
+
+<p>
+🔐 Safe Today • Secure Tomorrow
+</p>
+
+</footer>
+
+
+<!-- LOGIN / REGISTER MODAL -->
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<span
+class="close"
+onclick="closeModal()">
+×
+</span>
+
+<div id="modalContent"></div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* Modal */
+
+const modal =
+document.getElementById("modal");
+
+const content =
+document.getElementById("modalContent");
+
+
+function openRegister(){
+
+modal.style.display="flex";
+
+content.innerHTML=`
+
+<h2>Create Account</h2>
+
+<input
+id="registerName"
+placeholder="Full Name">
+
+<input
+id="registerEmail"
+type="email"
+placeholder="Email">
+
+<input
+id="registerPassword"
+type="password"
+placeholder="Password">
+
+<button
+class="btn"
+onclick="register()">
+
+Create Account
+
+</button>
+
+<div
+class="message"
+id="message">
+</div>
+
+`;
+
+}
+
+
+function openLogin(){
+
+modal.style.display="flex";
+
+content.innerHTML=`
+
+<h2>Login</h2>
+
+<input
+id="loginEmail"
+type="email"
+placeholder="Email">
+
+<input
+id="loginPassword"
+type="password"
+placeholder="Password">
+
+<button
+class="btn"
+onclick="login()">
+
+Login
+
+</button>
+
+<div
+class="message"
+id="message">
+</div>
+
+`;
+
+}
+
+
+function closeModal(){
+
+modal.style.display="none";
+
+}
+
+
+/* Register */
+
+function register(){
+
+let name =
+document.getElementById("registerName").value.trim();
+
+let email =
+document.getElementById("registerEmail").value.trim();
+
+let password =
+document.getElementById("registerPassword").value;
+
+let message =
+document.getElementById("message");
+
+
+if(!name || !email || !password){
+
+message.innerHTML =
+"সব তথ্য পূরণ করুন।";
+
+return;
+
+}
+
+
+localStorage.setItem(
+"kenduait_user",
+JSON.stringify({
+name:name,
+email:email,
+password:password
+})
+);
+
+message.innerHTML =
+"✅ Account তৈরি হয়েছে। এখন Login করুন।";
+
+}
+
+
+/* Login */
+
+function login(){
+
+let email =
+document.getElementById("loginEmail").value.trim();
+
+let password =
+document.getElementById("loginPassword").value;
+
+let message =
+document.getElementById("message");
+
+let user =
+JSON.parse(
+localStorage.getItem("kenduait_user")
+);
+
+
+if(
+user &&
+user.email === email &&
+user.password === password
+){
+
+message.innerHTML =
+"✅ Login successful! Welcome "
++ user.name;
+
+}else{
+
+message.innerHTML =
+"❌ Email অথবা Password সঠিক নয়।";
+
+}
+
+}
+
+
+/* Close modal */
+
+window.onclick=function(event){
+
+if(event.target === modal){
+
+closeModal();
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
